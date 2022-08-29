@@ -7,17 +7,15 @@ import blogs from '@/posts/_blogs';
 <template>
     <h1>日志</h1>
     <ul>
-        <li v-for="[key, blog] in Object.entries(blogs)" :key="key">
-            <div class="post">
-                <span class="title">
-                    <RouterLink :to="{ name: 'blog', params: { key } }">{{ blog.title }}</RouterLink>
-                </span>
-                <span class="auther">by {{ blog.author }}</span>
-                <div></div>
-                <span class="tags">
-                    <span v-for="tag in blog.tags" :key="tag" class="tag">{{ tag }}</span>
-                </span>
-            </div>
+        <li v-for="[key, blog] in Object.entries(blogs)" :key="key" class="post">
+            <span class="title">
+                <RouterLink :to="{ name: 'blog', params: { key } }"> {{  blog.title  }} </RouterLink>
+            </span>
+            <span class="auther">by {{  blog.author  }}</span>
+            <div></div>
+            <span class="tags">
+                <span v-for="tag in blog.tags" :key="tag" class="tag"> {{  tag  }} </span>
+            </span>
         </li>
     </ul>
 </template>
@@ -26,6 +24,7 @@ import blogs from '@/posts/_blogs';
 .post {
     font-size: 1em;
     line-height: 1.6em;
+    padding: 0.4em 0;
 
     .title {
         font-size: 1em;
