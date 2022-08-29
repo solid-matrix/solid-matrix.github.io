@@ -4,7 +4,7 @@ import app from "./app.vue";
 import router from "./router";
 import mathjax from "./plugins/mathjax";
 
-import "./assets/main.scss";
+import "./assets/styles/main.scss";
 
 createApp(app)
     .use(router)

@@ -2,7 +2,7 @@ export default {
     "vulkan-notes": {
         title: "Vulkan学习笔记",
         tags: ["图像处理", "图形学", "计算机", "学习笔记"],
-        component: 'blank',
+        component: 'vulkan-notes',
         createdAt: "2022-8-12",
         updatedAt: "2022-8-29",
         author: "Yi Jin",

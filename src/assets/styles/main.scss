@@ -6,9 +6,14 @@ html {
 
 body {
   margin: 0 auto;
+  max-width: 1024px;
 }
 
 a {
   text-decoration: none;
   color: teal;
+}
+
+img {
+  max-width: 100%;
 }

@@ -13,20 +13,21 @@ import { RouterLink, RouterView } from "vue-router";
     </nav>
   </header>
   <main>
-    <RouterView v-slot="{ Component }">
-      <transition name="fade">
-        <component :is="Component" />
-      </transition>
-    </RouterView>
+    <RouterView></RouterView>
   </main>
   <footer>
   </footer>
 </template>
 
 <style scoped lang="scss">
+@media print {
+  header a {
+    display: none;
+  }
+}
+
 header {
   margin: 0 auto;
-  max-width: 1024px;
   padding: 16px 16px;
 
   nav {
@@ -43,13 +44,11 @@ header {
 
 main {
   margin: 0 auto;
-  max-width: 1024px;
   padding: 0 16px;
 }
 
 footer {
   margin: 0 auto;
-  max-width: 1024px;
   padding: 0 16px;
 }
 </style>
