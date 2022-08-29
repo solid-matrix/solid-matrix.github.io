@@ -6,9 +6,49 @@ import blogs from '@/posts/_blogs';
 
 <template>
     <h1>日志</h1>
-    <ul v-for="[key, blog] in Object.entries(blogs)">
-        <li :key="key">
-            <RouterLink :to="{ name: 'blog', params: { key } }">{{ blog.title }}</RouterLink>
+    <ul>
+        <li v-for="[key, blog] in Object.entries(blogs)" :key="key">
+            <div class="post">
+                <span class="title">
+                    <RouterLink :to="{ name: 'blog', params: { key } }">{{ blog.title }}</RouterLink>
+                </span>
+                <span class="auther">by {{ blog.author }}</span>
+                <div></div>
+                <span class="tags">
+                    <span v-for="tag in blog.tags" :key="tag" class="tag">{{ tag }}</span>
+                </span>
+            </div>
         </li>
     </ul>
 </template>
+
+<style scoped lang="scss">
+.post {
+    font-size: 1em;
+    line-height: 1.6em;
+
+    .title {
+        font-size: 1em;
+    }
+
+    .auther {
+        font-size: 1em;
+        font-style: italic;
+        padding-left: 1em;
+        color: gray;
+    }
+
+    .tags {
+        font-size: 1em;
+        color: white;
+
+        .tag {
+            display: inline-block;
+            margin: 2px 2px;
+            padding: 0 4px;
+            border-radius: 4px;
+            background-color: gray;
+        }
+    }
+}
+</style>
