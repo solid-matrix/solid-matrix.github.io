@@ -1,5 +1,5 @@
 function loadMathJax() {
-    if (window.MathJax) {
+    if (window.MathJaxLoaded) {
         window.MathJax.typeset();
         return;
     }
@@ -13,14 +13,16 @@ function loadMathJax() {
         },
         startup: {
             pageReady: () => {
-                return window.MathJax.startup.defaultPageReady().then();
+                return window.MathJax.startup.defaultPageReady().then(() => {
+                    window.MathJaxLoaded = true;
+                });
             }
         }
     };
 
     (function () {
         var script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+        script.src = 'https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js';
         script.async = true;
         document.head.appendChild(script);
     })();
