@@ -8,11 +8,10 @@
   <h1>Vulkan学习笔记</h1>
 
   <div id="vulkan-diagram">
-    <h2>Vulkan 对象之间关系图示</h2>
-    <blockquote>
-      Github Repo: <a
-        href="https://github.com/David-DiGioia/vulkan-diagrams">https://github.com/David-DiGioia/vulkan-diagrams</a>
-    </blockquote>
+    <h2>Vulkan 图示</h2>
+
+    <h3>Vulkan Objects Overall</h3>
+    <img src="@/assets/images/vulkan-notes/Vulkan-Diagram.webp" />
 
     <h3>Boilerplate</h3>
     <img src="@/assets/images/vulkan-notes/boiler_plate.png" />
@@ -40,6 +39,14 @@
 
     <h3>Render loop</h3>
     <img src="@/assets/images/vulkan-notes/render_loop.png" />
+
+    <blockquote>
+      <h3>References: </h3>
+      <ul>
+        <li><a href="https://github.com/David-DiGioia/vulkan-diagrams">David-DiGioia/vulkan-diagrams</a></li>
+        <li><a href="https://gpuopen.com/learn/understanding-vulkan-objects/">Understanding Vulkan® Objects</a></li>
+      </ul>
+    </blockquote>
   </div>
 
   <div id="mvp-spaces">
