@@ -78,10 +78,13 @@
       $$
       其中图片区域在Vulkan坐标系中为：
       $$
+
       i \in
-      [-\alpha_w\cdot\text{scale}\cdot \text{translate}_x, \alpha_w\cdot\text{scale}\cdot \text{translate}_y]
-      \times
+      \displaylines{
+      [-\alpha_w\cdot\text{scale}\cdot \text{translate}_x, \alpha_w\cdot\text{scale}\cdot \text{translate}_y] \\
+      \times\\
       [-\alpha_h\cdot\text{scale}\cdot \text{translate}_x, \alpha_h\cdot\text{scale}\cdot \text{translate}_y]
+      }
       $$
 
       至此，渲染效果为
