@@ -17,7 +17,7 @@
       因此需要找到Vulkan坐标系( $\mathbb{V}$ )和图片坐标系( $\mathbb{I}$ )的一个对应关系。
       <img src="@/assets/images/image-display-coordinate/vulkan-coord.jpg" />
     </p>
-    <h3>原始大小渲染</h3>
+    <h3>图片保留宽高比例渲染</h3>
     <p>
       保留图片的宽高比例，不考虑缩放，即渲染区域和图片的像素一一对应<br />
 
@@ -136,6 +136,11 @@
       $$
       i = (i_{\text{normal} } + (0,1/f)\cdot(d_y,d_x)) \cdot I \text{ mod } I
       $$
+    </p>
+
+    <p>
+      <br /><br />
+      至此，图片的保持比例渲染，缩放，平移和Repeat Tiling已完成，只需编写着色器即可。
     </p>
   </div>
 </template>

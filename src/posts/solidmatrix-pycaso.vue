@@ -50,7 +50,7 @@ import IconPhotoshop from "../assets/icons/icon-photoshop.vue";
     <h2>Schedule</h2>
     <div id="schedule">
         <p>
-            <progress max="100" value="10" />
+            <progress max="100" value="12" />
         </p>
         <ol>
             <li>
@@ -77,9 +77,11 @@ import IconPhotoshop from "../assets/icons/icon-photoshop.vue";
                 <small><a href="/#/blog/image-display-coordinate">Check Blog</a></small>
             </li>
 
-            <li>Channel Viewer, Layer Viewer</li>
-
-
+            <li>
+                <span><del>Channel Viewer</del>, Layer Viewer, Artwork Viewer</span>
+                <br />
+                <small>Completed: Channel Viewer</small>
+            </li>
 
             <li>
                 <span>Draw Tools, Functions on Channel and Layers both, and Libraries</span>

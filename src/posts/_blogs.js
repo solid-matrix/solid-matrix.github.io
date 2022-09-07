@@ -8,7 +8,7 @@ export default {
         author: "Yi Jin",
     },
     "image-display-coordinate": {
-        title: "图片渲染中缩放平移的坐标系变换",
+        title: "Vulkan渲染图片：坐标变换与Repeat Tiling实现",
         tags: ["图像处理", "图形学", "计算机"],
         component: 'image-display-coordinate',
         createdAt: "2022-9-7",
