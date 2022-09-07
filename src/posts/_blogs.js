@@ -7,6 +7,14 @@ export default {
         updatedAt: "2022-8-29",
         author: "Yi Jin",
     },
+    "image-display-coordinate": {
+        title: "图片渲染中缩放平移的坐标系变换",
+        tags: ["图像处理", "图形学", "计算机"],
+        component: 'image-display-coordinate',
+        createdAt: "2022-9-7",
+        updatedAt: "2022-9-7",
+        author: "Yi Jin",
+    },
     "photoshop-curve-implement": {
         title: "Photoshop曲线工具的实现",
         tags: ["Photoshop", "图像处理", "数学", "线性代数", "计算机"],

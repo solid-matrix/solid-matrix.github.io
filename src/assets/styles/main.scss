@@ -1,6 +1,6 @@
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 1.6em;
+  line-height: 2em;
 }
 
 body {
@@ -15,4 +15,22 @@ a {
 
 img {
   max-width: 100%;
+}
+
+.svg-icon {
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
+
+  svg {
+    height: 1em;
+    width: 1em;
+  }
+}
+
+.svg-icon.svg-baseline svg {
+  bottom: -0.125em;
+  position: absolute;
 }
