@@ -29,7 +29,7 @@
       $$
 
       $$
-      i_y = (\frac{v_y}{2\alpha_w}+\frac{1}{2}) \cdot I_h
+      i_y = (\frac{v_y}{2\alpha_h}+\frac{1}{2}) \cdot I_h
       $$
 
       $$
@@ -106,10 +106,17 @@
       $$
       i = (\frac{v-\text{translate} }{2\alpha \cdot \text{scale} }+\frac{1}{2})\cdot I \text{ mod } I
       $$
-
+    </p>
+    <p>
+      <i><b>Remark:</b></i> $\text{mod}$ 运算符为取余运算。
+      计算 $a \text{ mod } b$ 时，$b$ 必定为正整数，当 $a$ 为非负整数时，在着色器程序中，其值应为 <code>a % b</code>。
+      但如果 $a$ 为负时，其值应为 <code>((-a / b + 1) * b + a) % b</code>。
+    </p>
+    <p>
       渲染效果为：
       <img src="@/assets/images/image-display-coordinate/stage-4.png" />
     </p>
+
 
     <h3>错位</h3>
     <p>

@@ -18,9 +18,17 @@ export default {
     "photoshop-curve-implement": {
         title: "Photoshop曲线工具的实现",
         tags: ["Photoshop", "图像处理", "数学", "线性代数", "计算机"],
-        component: 'blank',
+        component: 'photoshop-curve-implement',
         createdAt: "2022-8-12",
         updatedAt: "2022-8-29",
+        author: "Yi Jin",
+    },
+    "compression-algorithm-comparison": {
+        title: "常见压缩算法比较与LZ4与ZSTD分析",
+        tags: ["数学", "线性代数", "压缩", "算法"],
+        component: 'blank',
+        createdAt: "2022-9-13",
+        updatedAt: "2022-9-13",
         author: "Yi Jin",
     },
     "layer-color-blending-algorithm": {

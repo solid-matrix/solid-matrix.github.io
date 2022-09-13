@@ -50,7 +50,7 @@ import IconPhotoshop from "../assets/icons/icon-photoshop.vue";
     <h2>Schedule</h2>
     <div id="schedule">
         <p>
-            <progress max="100" value="12" />
+            <progress max="100" value="14" />
         </p>
         <ol>
             <li>
@@ -63,9 +63,12 @@ import IconPhotoshop from "../assets/icons/icon-photoshop.vue";
 
             </li>
             <li>
-                <span><del>Vulkan</del> Wrapper</span>
+                <span><del>Vulkan Wrap</del>per</span>
                 <br />
-                <small>Partially completed, more complicated than expected</small>
+                <small>
+                    Almost completed <br />
+                    need encapsulating more so that user no need to using Silk.Net package
+                </small>
             </li>
             <li>
                 <span><del>Tile View, Scale, Translate, and Interactions</del></span>
@@ -78,19 +81,68 @@ import IconPhotoshop from "../assets/icons/icon-photoshop.vue";
             </li>
 
             <li>
-                <span><del>Channel Viewer</del>, Layer Viewer, Artwork Viewer</span>
+                <span><del>Channel Viewer, Layer Vie</del>wer,Artwork Viewer</span>
                 <br />
                 <small>Completed: Channel Viewer</small>
+                <br />
+                <small>Completed: Layer Viewer for bilevel, grayscale, rgb, rgba, cmyk</small>
+            </li>
+
+            <li>
+                <div>Compression</div>
+            </li>
+
+            <li>
+                <div>File Encoding (PCS Format) TIFF behind or totally new?</div>
+                <small>
+                    <ul>
+                        <li>Artwork save as => PCS format</li>
+                        <li>Layer export as => TIF/PNG</li>
+                        <li>Channel export as => TIF/PNG format</li>
+                    </ul>
+                </small>
+            </li>
+
+            <li>
+                <div>Research one TIFF 6.0</div>
+                <small>
+                    <ul>
+                        <li><a href="https://www.itu.int/itudoc/itu-t/com16/tiff-fx/docs/tiff6.pdf">Tiff 6.0
+                                Specification</a>
+                        </li>
+                        <li>C# Library: <a href="https://github.com/BitMiracle/libtiff.net">LibTiff.NET</a></li>
+                    </ul>
+                </small>
             </li>
 
             <li>
                 <span>Draw Tools, Functions on Channel and Layers both, and Libraries</span>
             </li>
-            <li>Large Image Process Solution: Tiling or Dynamic Sampler?</li>
-            <li>File Encoding</li>
-            <li>Artwork Viewer, and its desktop application viewer</li>
+
+            <li>
+                <span>Tool Interaction: Mouse (Drag, Wheel, Click ), Keyboard (Key Combinations)</span>
+            </li>
+
+            <li>
+                <span>Transform Functions: Enlarge, Shrink, Clip Canvas, Change Resolution</span>
+            </li>
+
+            <li>
+                <span>Font Rendering </span>
+            </li>
+
+            <li>
+                <span>Large Image Process Solution: Tiling or Dynamic Sampler?</span>
+            </li>
+            <li>
+                <span>
+                    Artwork Viewer, and its desktop application viewer
+                </span>
+            </li>
+            <li>
+                <span>Pattern-based seamlesss Halftoning Algorithem</span>
+            </li>
         </ol>
-        <p></p>
     </div>
 
     <h2>Architecture</h2>
@@ -177,13 +229,61 @@ import IconPhotoshop from "../assets/icons/icon-photoshop.vue";
                 </li>
             </ul>
 
-            <h4>Encoding</h4>
+            <h4>Encoding (.PCS Format)</h4>
+            <p>Encoding considering two methods:</p>
+            <ul>
+                <li>
+                    <div>Tiff behind</div>
+                    <div>Pros</div>
+                    <ul>
+                        <li>relatively flexible</li>
+                        <li>if with *.tif/*.tiff suffix, with thumbnail, can open with other image
+                            viewer software</li>
+                        <li>time saving, no need to create a new encoder library</li>
+                    </ul>
+                    <div>Cons</div>
+                    <ul>
+                        <li>not toally flexible</li>
+                        <li>if with *.tif suffix and opened with other software, file may be corrupted</li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Invent new</div>
+                    <div>Pros</div>
+                    <ul>
+                        <li>totally flexible</li>
+                        <li>for viewing the pcs files, can also developed a viewer software besides the editor</li>
+                    </ul>
+                    <div>Cons</div>
+                    <ul>
+                        <li>take longer time</li>
+                        <li>scalability: the bad designing of the format may lead to remodeling the whole format</li>
+                    </ul>
+                </li>
+            </ul>
             <p>
-                The Encoding of file consists of two parts: header and content. Header part includes all meta infomation
-                of the file, and a preview thumbnail. Content part includes only the channel data which is compressed.
-                So that software can know the file information without reading the whole file, and can also preview the
-                file in a fast way.
+                If Invent a new format, the format should be like: <br />
+                The Encoding of file consists of two parts: header and content. Header part includes all meta
+                infomation of the file, and a preview thumbnail. Content part includes only the channel data which is
+                compressed. So that software can know the file information without reading the whole file, and can also
+                preview the file in a fast way.
             </p>
+
+            <h4>Compression</h4>
+            <ul>
+                <li>
+                    <div>LZ4 Algorithm</div>
+                    <p>Very high speed, faster than hard disk speed; about 50% compression ratio</p>
+                </li>
+                <li>
+                    <div>Zip Algorithm</div>
+                    <p>Raletiva slow speed; about 25% compression ratio; is file based.</p>
+                </li>
+                <li>
+                    <div>Zstd Algorithm</div>
+                    <p></p>
+                </li>
+            </ul>
         </div>
     </div>
 
