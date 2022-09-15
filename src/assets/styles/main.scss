@@ -13,13 +13,30 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
+}
+
+table {
+  margin: 1em auto;
+  border: 1px solid;
+  width: 100%;
+  line-height: 2em;
+
+  td,
+  th {
+    border: 1px solid;
+  }
 }
 
 p,
 ul,
 ol {
   line-height: 2em;
+}
+
+p {
+  text-indent: 2em;
 }
 
 .svg-icon {
