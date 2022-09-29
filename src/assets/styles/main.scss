@@ -35,10 +35,6 @@ ol {
   line-height: 2em;
 }
 
-p {
-  text-indent: 2em;
-}
-
 .svg-icon {
   display: inline-flex;
   align-self: center;
@@ -55,4 +51,8 @@ p {
 .svg-icon.svg-baseline svg {
   bottom: -0.125em;
   position: absolute;
+}
+
+.small {
+  font-size: smaller;
 }

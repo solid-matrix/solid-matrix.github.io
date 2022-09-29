@@ -1,6 +1,6 @@
 <template>
 
-  <h2>User Interface</h2>
+  <h2>SolidMatrix Pycaso User Interface</h2>
   <div id="ui">
     <h3>Interactions</h3>
 

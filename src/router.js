@@ -24,6 +24,10 @@ const router = createRouter({
             name: "project",
             component: () => import("./views/project-view.vue"),
         }, {
+            path: "/post/:key",
+            name: "post",
+            component: () => import("./views/post-view.vue"),
+        }, {
             path: "/resources",
             name: "resources",
             component: () => import("./views/resources-view.vue"),
