@@ -1,7 +1,7 @@
 <template>
   <h2>SolidMatrix Pycaso Specification</h2>
 
-  <div id="arch-subprojects">
+  <div id="spec-subprojects">
     <h3>Subprojects</h3>
     <ul>
       <li>
@@ -33,7 +33,7 @@
     </ul>
   </div>
 
-  <div id="arch-data-structure">
+  <div id="spec-data-structure">
     <h3>Data Structure</h3>
 
     <p>Three hierarchy: <b>Artwork</b> - <b>Layer</b> - <b>Channel</b></p>
@@ -152,7 +152,7 @@
 
   </div>
 
-  <div id="arch-file-encoding">
+  <div id="spec-file-encoding">
     <h3>File Encoding (.PCS Format)</h3>
 
     <p>Format Codec Encoding Structure</p>
@@ -338,13 +338,36 @@
     </table>
   </div>
 
-  <div id="arch-tools-select">
+  <div id="spec-dynamic-sampler">
+    <h3>Dynamic Sampler</h3>
+    <p>
+      To render huge image which exceed the GPU image dimension limits,
+      the dynamic sampler is display-resolution-based sampler.
+      The sampler do sampling and render in a constant time, is display resolution related.
+    </p>
+  </div>
+
+  <div id="spec-reactive-render">
+    <h3>Reactive Render Framework</h3>
+    <p>
+      A general vulkan render framework. Register shader variables and run automatically.
+    </p>
+    <ul class="small">
+      <li>Register uniform buffer;</li>
+      <li>Register uniform image;</li>
+      <li>Register vertex inputs;</li>
+      <li>Register vertex attributes;</li>
+      <li>Register constants push;</li>
+    </ul>
+  </div>
+
+  <div id="spec-tools-select">
     <h3>Select Tools</h3>
 
     <p>Selection is a grayscale image format</p>
   </div>
 
-  <div id="arch-tools-draw">
+  <div id="spec-tools-draw">
     <h3>Draw Tools</h3>
 
     <p></p>

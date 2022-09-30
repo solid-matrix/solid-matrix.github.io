@@ -4,7 +4,7 @@
   <div id="notes-encoding">
     <h3>Encoding Research</h3>
     <p>Encoding considering two methods:</p>
-    <ul>
+    <ul class="small">
       <li>
         <div>Tiff behind</div>
         <div>Pros</div>
@@ -274,6 +274,7 @@
       <u>Adaptive Cache</u>: Read, write and cache adaptively, according to the RAM left.
       Working in the directory of current file.
     </p>
+
     <h4>Process Methodology</h4>
     <p>
       Considering Case 3, iterate all pixels of one channel takes 30S (1 core, Intel i7-12700).
@@ -281,8 +282,8 @@
       For worse CPU, it will take longer. So some techniques have to be adopted.
     </p>
     <p>
-      <u>Scalable Sampler</u>: the screen resolution is much smaller than limit case image size.
-      So only keep a scalable sampler:
+      <u>Dynamic Sampler</u>: the screen resolution is much smaller than limit case image size.
+      So only keep a dynamic sampler:
       When image pixel is smaller than screen pixel,
       only process on the sampled image for preview.
       then background do the work on raw image.
@@ -290,23 +291,23 @@
       When image pixel actual size is equal or lager than scrren pixel,
       directly process and display on raw image, each pixel is clear.
     </p>
+
     <h4>Render Methodology</h4>
     <p>
       Image size will often excess the GPU image dimension limit.
       So can only transfer a sampled image to GPU for displaying.
-      The <u>Scalable Sampler</u> explained above can also solve this problem.
+      The <u>Dynamic Sampler</u> explained above can also solve this problem.
       common display resolutions listed below.
       we can see, even on 4K or similar, only about 10Mpx will be used for displaying.
       No need to use raw image with 2990Mpx in extreme case.
     </p>
-
-    <ul>
+    <ul class="small">
       <li>1080P display: 1920 X 1080.</li>
       <li>4K display: 4096 X 2160</li>
       <li>Apple iMac Retina: 4480 X 2520 </li>
     </ul>
     <p>
-      <u>Reactive Redraw Framework</u>: common graphic software all redraw periodically.
+      <u>Reactive Render Framework</u>: common graphic software all redraw periodically.
       To reduce the GPU burden, we can develop a reactive redraw framework.
       Only redraw when necessary, like window resized or stage updated, no need periodically redraw.
     </p>

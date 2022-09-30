@@ -54,10 +54,9 @@
                     <RouterLink to="/post/solidmatrix-pycaso-spec">Specification</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/post/solidmatrix-pycaso-ui">User Interface</RouterLink>
+                    <RouterLink to="/post/solidmatrix-pycaso-ui">User Interface Design</RouterLink>
                 </li>
             </ul>
-
         </div>
     </div>
 
@@ -66,6 +65,20 @@
 
         <h3>Todo</h3>
         <ul id="schedule-todo">
+            <li>
+                <div>Reactive Render Framework Implementation</div>
+                <ul class="small">
+                    <li>render only on uniform buffer update or framebuffer resize</li>
+                </ul>
+            </li>
+
+            <li>
+                <div>Dynamic Sampler Implementation</div>
+                <ul class="small">
+                    <li>Display-resolution-based sampler</li>
+                </ul>
+            </li>
+
             <li>
                 <div>File Encoding (PCS Format).</div>
                 <ul class="small">
@@ -77,12 +90,7 @@
                     <li>Todo: Channel export as => TIF/PNG format</li>
                 </ul>
             </li>
-            <li>
-                <div>Scalable Sampler Implementation</div>
-                <ul class="small">
-                    <li>Display-resolution-based sampler</li>
-                </ul>
-            </li>
+
             <li>
                 <div>Draw Tools, Selection Tools Functions on Channel and Layers both, and Libraries</div>
             </li>
@@ -111,7 +119,11 @@
             </li>
 
             <li>
-                <div>Parallel Analysis</div>
+                <div>Research: Vulkan Multiple Subpass rendering</div>
+            </li>
+
+            <li>
+                <div>Analysis: Parallel Computation</div>
                 <ul class="small">
                     <li>Seperate the application into several threads to improve the performance.</li>
                 </ul>
@@ -210,12 +222,6 @@
                             href="https://learn.microsoft.com/en-us/dotnet/standard/io/memory-mapped-files">MemoryMappedFile</a>.
                         Good for huge file operation.
                     </li>
-                </ul>
-            </li>
-            <li>
-                <div><del>Reactive Redraw Framework Implementation</del></div>
-                <ul class="small">
-                    <li>Update uniform buffers and redraw only when interaction occurred</li>
                 </ul>
             </li>
         </ul>
